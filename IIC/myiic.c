@@ -80,11 +80,11 @@ static bool I2C_WaitAck(void)
     I2C_delay();
     SCL_H;
     I2C_delay();
-/*    if (SDA_read) {
+    if (SDA_read) {
         SCL_L;
         return false;
-    }*/
-    while(n<50)
+    }
+/*    while(n<50)
     {
     	if(!SDA_read)
     	{
@@ -92,9 +92,9 @@ static bool I2C_WaitAck(void)
     		return true;
     	}
     	n++;
-    }
+    }*/
     SCL_L;
-    return false;
+    return true;
 }
 //===================================================================================
 //===================================================================================
@@ -218,7 +218,7 @@ bool i2cread(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
 {
 	if(i2cReadBuffer(addr,reg,len,buf))
 		return 0;
-	else -1;
+	else return -1;
 }
 /*
 bool i2cWriteBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t data)

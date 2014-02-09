@@ -57,7 +57,7 @@ struct int_param_s {
 #define MPU_INT_STATUS_DMP_5            (0x2000)
 
 /* Set up APIs */
-int mpu_init(struct int_param_s *int_param);
+int mpu_init(void);
 int mpu_init_slave(void);
 int mpu_set_bypass(unsigned char bypass_on);
 
