@@ -18,7 +18,7 @@
 
 #define true 1
 #define false 0 
-#define bool  uint8_t
+typedef int8_t bool;
 
 /*
 #define MPU6050_READRATE			1000	//6050¶ÁÈ¡ÆµÂÊ
@@ -36,25 +36,22 @@
 #define	I2C_Direction_Receiver      1	 
 /*====================================================================================================*/
 /*====================================================================================================*/
-bool i2cWriteWords(uint8_t addr, uint8_t reg, uint8_t len, uint16_t* data);
-bool i2cWriteWord(uint8_t addr, uint8_t reg, uint16_t data);
-bool i2cWriteBuffer(uint8_t addr_, uint8_t reg_, uint8_t len_, uint8_t *data);
-bool i2cWriteBits(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t len, uint8_t data);
-bool i2cWriteBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t data);
-bool i2cWrite(uint8_t addr_, uint8_t reg_, uint8_t data);
+//bool i2cWriteWords(uint8_t addr, uint8_t reg, uint8_t len, uint16_t* data);
+//bool i2cWriteWord(uint8_t addr, uint8_t reg, uint16_t data);
+bool i2cWriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf);
+//bool i2cWriteBits(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t len, uint8_t data);
+//bool i2cWriteBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t data);
+bool i2cWrite(uint8_t addr, uint8_t reg, uint8_t const *data);
 
-bool i2cReadBuffer(uint8_t addr_, uint8_t reg_, uint8_t len, uint8_t* buf,uint16_t *timeout);
-bool i2cReadBits(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t len, uint8_t *data, uint16_t *timeout);
-bool i2cReadBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t *data, uint16_t *timeout);
-bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *data,uint16_t *timeout);
+bool i2cReadBuffer(uint8_t addr_, uint8_t reg_, uint8_t len, uint8_t* buf);
+//bool i2cReadBits(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t len, uint8_t *data, uint16_t *timeout);
+//bool i2cReadBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t *data, uint16_t *timeout);
+bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *data);
 
 void i2cInit(void);
 
-
-uint16_t i2cGetErrorCounter(void);
-
-//int8_t i2cwrite(uint8_t addr, uint8_t reg, uint8_t len, uint8_t * data);
-//int8_t i2cread(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf);
+bool i2cwrite(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf);
+bool i2cread(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf);
 /*====================================================================================================*/
 /*====================================================================================================*/
 #endif

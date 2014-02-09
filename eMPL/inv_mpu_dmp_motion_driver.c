@@ -23,7 +23,6 @@
 #include "inv_mpu_dmp_motion_driver.h"
 #include "dmpKey.h"
 #include "dmpmap.h"
-
 /* The following functions must be defined for this platform:
  * i2c_write(unsigned char slave_addr, unsigned char reg_addr,
  *      unsigned char length, unsigned char const *data)
@@ -61,6 +60,14 @@
 #define get_ms  uc3l0_get_clock_ms
 #define log_i       MPL_LOGI
 #define log_e       MPL_LOGE
+
+#elif defined STM32F103C8
+//#include "stm32f10x.h"
+#include "delay.h"
+#define delay_ms    delay_ms
+#define get_ms      get_ms
+#define log_i(...)     do {} while (0)
+#define log_e(...)     do {} while (0)
 
 #else
 #error  Gyro driver is missing the system layer implementations.

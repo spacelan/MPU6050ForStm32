@@ -1,6 +1,4 @@
-//extern "C"
-//{
-#include "STM32_I2C.h"
+#include "myiic.h"
 
 uint16_t timeout;
 #define TIMEOUT &timeout
@@ -75,20 +73,31 @@ static void I2C_NoAck(void)
 
 static bool I2C_WaitAck(void)
 {
+	u8 n = 0;
     SCL_L;
     I2C_delay();
     SDA_H;
     I2C_delay();
     SCL_H;
     I2C_delay();
-    if (SDA_read) {
+/*    if (SDA_read) {
         SCL_L;
         return false;
+    }*/
+    while(n<50)
+    {
+    	if(!SDA_read)
+    	{
+    		SCL_L;
+    		return true;
+    	}
+    	n++;
     }
     SCL_L;
-    return true;
+    return false;
 }
-
+//===================================================================================
+//===================================================================================
 static void I2C_SendByte(uint8_t byte)
 {
     uint8_t i = 8;
@@ -138,7 +147,7 @@ void i2cInit(void)
     GPIO_Init(GPIOB, &gpio);
 }
 
-bool i2cWriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
+bool i2cWriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
 {
     int i;
     if (!I2C_Start())
@@ -161,27 +170,19 @@ bool i2cWriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
     return true;
 }
 
-bool i2cWrite(uint8_t addr, uint8_t reg, uint8_t data)
+bool i2cWrite(uint8_t addr, uint8_t reg, uint8_t const *data)
 {
-	return i2cWriteBuffer(addr,reg,1,&data);
-	/*
-    if (!I2C_Start())
-        return false;
-    I2C_SendByte(addr << 1 | I2C_Direction_Transmitter);
-    if (!I2C_WaitAck()) {
-        I2C_Stop();
-        return false;
-    }
-    I2C_SendByte(reg);
-    I2C_WaitAck();
-    I2C_SendByte(data);
-    I2C_WaitAck();
-    I2C_Stop();
-    return true;
-    */
+	return i2cWriteBuffer(addr,reg,1,data);
 }
 
-bool i2cReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf,uint16_t *timeout)
+bool i2cwrite(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
+{
+	if(i2cWriteBuffer(addr,reg,len,buf))
+		return 0;
+	else return -1;
+}
+
+bool i2cReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
 {
     if (!I2C_Start())
         return false;
@@ -208,39 +209,18 @@ bool i2cReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf,uint16_t
     return true;
 }
 
-bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *data,uint16_t *timeout)
+bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *data)
 {
-	return i2cReadBuffer(addr,reg,1,data,timeout);
-	/*
-	if(!I2C_Start())
-		return false;
-	I2C_SendByte(addr << 1 | I2C_Direction_Transmitter);
-	if(!I2C_WaitAck())
-	{
-		I2C_Stop();
-		return false;
-	}
-	I2C_SendByte(reg);
-	I2C_WaitAck();
-	I2C_Start();
-	I2C_SendByte(addr << 1 | I2C_Direction_Receiver);
-	I2C_WaitAck();
-	*data = I2C_ReceiveByte();
-	I2C_Stop();
-	return true;
-	*/
+	return i2cReadBuffer(addr,reg,1,data);
 }
 
-
-
-uint16_t i2cGetErrorCounter(void)
+bool i2cread(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
 {
-    // TODO maybe fix this, but since this is test code, doesn't matter.
-    return 0;
+	if(i2cReadBuffer(addr,reg,len,buf))
+		return 0;
+	else -1;
 }
-//}
-
-
+/*
 bool i2cWriteBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t data)
 {
     uint8_t b;
@@ -268,20 +248,6 @@ bool i2cReadBit(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t *data, uint16
 	*data = (b >> bitNum) & 1;
 	return s;
 }
-/*
-bool i2cReadBits(uint8_t addr, uint8_t reg, uint8_t bitNum, uint8_t len, uint8_t *data, uint16_t *timeout)
-{
-	uint8_t i,b;
-	*data = 0;
-	for(i=0;i<len;i++)
-	{
-		*data <<= 1;
-		i2cReadBit(addr,reg,bitNum,&b,timeout);
-		if(b)
-			*data |= 1;
-	}
-	return true;
-}*/
 
 bool i2cReadBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *data, uint16_t *timeout)
 {
@@ -332,7 +298,7 @@ bool i2cWriteWord(uint8_t addr, uint8_t reg, uint16_t data)
 {
 	return i2cWriteWords(addr,reg,1,&data);
 }
-
+*/
 
 
 

@@ -65,7 +65,10 @@ void delay_us(u32 nus)
 	SysTick->VAL =0X00;       //Çå¿Õ¼ÆÊýÆ÷	 
 }
 
+void get_ms(u32 *nms)
+{
 
+}
 
 
 
