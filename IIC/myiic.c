@@ -73,7 +73,7 @@ static void I2C_NoAck(void)
 
 static bool I2C_WaitAck(void)
 {
-	u8 n = 0;
+//	u8 n = 0;
     SCL_L;
     I2C_delay();
     SDA_H;
