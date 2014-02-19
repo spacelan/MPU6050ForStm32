@@ -48,26 +48,31 @@ void MPU_Config(void)
     					|DMP_FEATURE_SEND_CAL_GYRO
     					|DMP_FEATURE_SEND_RAW_ACCEL
     					) == 0 ? 1 : myError(6);
-    dmp_set_fifo_rate(100) == 0 ? 1 : myError(7);
+    dmp_set_fifo_rate(50) == 0 ? 1 : myError(7);
     mpu_set_dmp_state(ENABLE) == 0 ? 1 : myError(8);
     run_self_test();
 }
 
 void get_sensors(void)
 {
+	float pitch,roll,yaw;
     short gyro[3], accel[3], sensors;
     unsigned char more;
     long quat[4];
     unsigned long timestamp = 0;
-    while(0 != dmp_read_fifo( gyro, accel, quat, &timestamp, &sensors, &more ) );
+    while(dmp_read_fifo(gyro, accel, quat, &timestamp, &sensors, &more) || more);
     {
-        float w,x,y,z;
-        w = (float)quat[0] / q30;
-        x = (float)quat[1] / q30;
-        y = (float)quat[2] / q30;
-        z = (float)quat[3] / q30;
+/*        float w,x,y,z;
+        w = quat[0] / q30;
+        x = quat[1] / q30;
+        y = quat[2] / q30;
+        z = quat[3] / q30;
+
+		pitch = asin(2*w*y - 2*z*x) * 57.3;
+		roll = atan2(2*w*x + 2*y*z,1 - 2*x*x - 2*y*y) * 57.3;
+		yaw = atan2(2*w*z + 2*x*y,1 - 2*y*y - 2*z*z) * 57.3;
+*/
 //TODO:        attitude_mixDMPResult(w,x,y,z);
         send_packet(PACKET_TYPE_QUAT,quat);
-
     }
 }

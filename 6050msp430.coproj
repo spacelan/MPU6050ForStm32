@@ -91,6 +91,7 @@
     <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="myControl.c" path="myControl.c" type="1"/>
     <File name="hardware/myusart.h" path="myusart/myusart.h" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
@@ -122,11 +123,12 @@
     <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
     <File name="mpu6050/dmpmap.h" path="eMPL/dmpmap.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
-    <File name="sys/delay.h" path="delay/delay.h" type="1"/>
     <File name="syscalls" path="" type="2"/>
+    <File name="sys/delay.h" path="delay/delay.h" type="1"/>
     <File name="hardware/myled.c" path="led/myled.c" type="1"/>
     <File name="mpu6050/inv_mpu.h" path="eMPL/inv_mpu.h" type="1"/>
     <File name="stm_lib/inc" path="" type="2"/>
+    <File name="myControl.h" path="myControl.h" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>
