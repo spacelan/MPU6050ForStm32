@@ -16,5 +16,9 @@
 --
 [https://github.com/spacelan/MyCom-receiveQuat](https://github.com/spacelan/MyCom-receiveQuat)</br>
 
+渣像素
+--
+![image](https://github.com/spacelan/MPU6050ForStm32/raw/master/IMG_20140222_113035.jpg "image")
+
 
 
