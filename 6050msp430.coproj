@@ -33,7 +33,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="../../configuration/programdata/6050msp430/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="d:/coocox/coide/configuration/programdata/6050msp430/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -95,15 +95,15 @@
     <File name="hardware/myusart.h" path="myusart/myusart.h" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="cmsis/core_cm3.c" path="cmsis/core_cm3.c" type="1"/>
-    <File name="myErrorAndWorning.c" path="myErrorAndWorning.c" type="1"/>
     <File name="hardware/myiic.h" path="IIC/myiic.h" type="1"/>
+    <File name="myErrorAndWorning.c" path="myErrorAndWorning.c" type="1"/>
     <File name="mpu6050/mpu6050.c" path="6050/mpu6050.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
     <File name="sys/sys.h" path="sys/sys.h" type="1"/>
     <File name="hardware" path="" type="2"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="hardware/myusart.c" path="myusart/myusart.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
     <File name="myErrorAndWorning.h" path="myErrorAndWorning.h" type="1"/>
