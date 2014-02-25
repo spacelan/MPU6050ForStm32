@@ -106,10 +106,10 @@ static inline int reg_int_cb(struct int_param_s *int_param)
 #include "myiic.h"
 #include "delay.h"
 //#include "msp430_interrupt.h"
-#define i2c_write   i2cwrite
-#define i2c_read    i2cread
-#define delay_ms    delay_ms
-#define get_ms      get_ms
+#define i2c_write   I2c_write
+#define i2c_read    I2c_read
+#define delay_ms    Delay_ms
+#define get_ms      Get_ms
 static inline int reg_int_cb(struct int_param_s *int_param)
 {
 //    return msp430_reg_int_cb(int_param->cb, int_param->pin, int_param->lp_exit,

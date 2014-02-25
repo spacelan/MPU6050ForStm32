@@ -1,11 +1,11 @@
 #include "myled.h"
 /*
- * 函数名：myLED_GPIO_Config
+ * 函数名：MyLED_GPIO_Config
  * 描述  ：配置LED用到的I/O口
  * 输入  ：无
  * 输出  ：无
  */
-void myLED_GPIO_Config(void)
+void MyLED_GPIO_Config(void)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_AFIO, ENABLE);

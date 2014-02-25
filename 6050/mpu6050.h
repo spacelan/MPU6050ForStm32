@@ -5,5 +5,6 @@
 #define BYTE u8
 #define q30  1073741824.0f
 void MPU_Config(void);
-void get_sensors(void);
+void MPU_ReadDMPFifo(void);
+void *MPU_GetQuatData(void);
 #endif

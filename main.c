@@ -22,13 +22,13 @@ int main()
 {
 	SystemInit();
 	NVIC_Configuration();
-	myLED_GPIO_Config();
-	i2cInit();
-	myUsart_Config(115200);
+	MyLED_GPIO_Config();
+	I2c_Init();
+	MyUsart_Config(115200);
 	USART_ITConfig(USART1,USART_IT_RXNE,DISABLE);
-	delay_init(72);
+	Delay_Init(72);
 	//上电等待
-	delay_ms(10);
+	Delay_ms(10);
 	MPU_Config();
 	myState = myControl_Type_Pause;
 	USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
@@ -40,10 +40,9 @@ int main()
 			//NVIC_SETFAULTMASK();
 			NVIC_SystemReset();
 		}
-		get_sensors();
-		delay_ms(50);
+		MPU_ReadDMPFifo();
+		MyUsart_SendPacket(PACKET_TYPE_QUAT,MPU_GetQuatData());
+		Delay_ms(50);
 	}
 }
 
-
-//的国家的概念都搞

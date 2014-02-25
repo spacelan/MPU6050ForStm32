@@ -2,7 +2,6 @@
 #include "string.h"
 #include "myErrorAndWorning.h"
 
-
 //数据包格式：0xAA 0x55 length type data
 enum myStatesz_Type
 {
@@ -18,7 +17,32 @@ enum myControl_Type
 	myControl_Type_Restart,
 };
 
-void myUsart_Config(int rate)
+#define MY_USART_BUF_SIZE_TRANSMIT 256
+#define MY_USART_BUF_SIZE_RECEIVE 256
+
+static struct
+{
+    volatile u32 transmitHead;
+    volatile u32 transmirTail;
+    volatile u32 receiveHead;
+    volatile u32 receiveTail;
+    volatile u8 transmitBuf[MY_USART_BUF_SIZE_TRANSMIT];
+    volatile u8 receiveBuf[MY_USART_BUF_SIZE_RECEIVE];
+}myUsart;
+
+/*********************************************************************
+*Function: MyUsart_Config
+*Description: 初始化串口USART1 RX->PA9 TX->PA10
+*Description: 波特率 rate， 数据位 8bits， 校验位 none， 停止位 1bit
+*Description: 配置USART1中断优先级
+*Input: int rate 串口波特率
+*Output:
+*Return: void
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void MyUsart_Config(int rate)
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
 	USART_InitTypeDef USART_InitStructure;
@@ -53,21 +77,37 @@ void myUsart_Config(int rate)
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
 
+	//myUsart结构清零
+	memset(&myUsart,0,sizeof(myUsart));
 }
 
-void send_packet(char packet_type, void *data)
+/*********************************************************************
+*Function: MyUsart_SendPacket
+*Description: 串口发送数据包
+*Description: 格式 0xaa 0x55 length type data
+*Input: char packet_type 数据包类型
+*Input: const void *data 数据指针
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void MyUsart_SendPacket(char packet_type,const void *data)
 {
-#define MAX_BUF_LENGTH  (21)
-    u8 buf[MAX_BUF_LENGTH], length;
+//不想改了  直接define吧
+#define buf myUsart.transmitBuf
+	memset(buf,0,MY_USART_BUF_SIZE_TRANSMIT);
 
-    memset(buf, 0, MAX_BUF_LENGTH);
+    uint8_t length;
+
     buf[0] = 0xaa;
     buf[1] = 0x55;
 
     if (packet_type == PACKET_TYPE_ACCEL || packet_type == PACKET_TYPE_GYRO)
     {
         short *sdata = (short*)data;
-        buf[2] = 0x06;
+        buf[2] = 7;
         buf[3] = packet_type;
         buf[4] = (char)(sdata[0] >> 8);
         buf[5] = (char)sdata[0];
@@ -100,10 +140,22 @@ void send_packet(char packet_type, void *data)
         buf[19] = (char)ldata[3];
         length = 20;
     }
-    myUsartSend(buf,length);
+    MyUsart_Send(buf,length);
+#undef buf
 }
 
-void myUsartSend(u8 *buf,u8 len)
+/*********************************************************************
+*Function: MyUsart_Send
+*Description: 调用USART_SendData发送所有buf
+*Input: const u8 *buf 数据缓存
+*Input: u8 len 缓存长度
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void MyUsart_Send(const u8 *buf,u8 len)
 {
 	u8 i;
 	for(i=0;i<len;i++)
@@ -113,7 +165,18 @@ void myUsartSend(u8 *buf,u8 len)
 	}
 }
 
-void handleOneByte(u8 byte)
+/*********************************************************************
+*Function: HandleOneByte
+*Description: 处理一字节数据，判断此字节是什么表示什么
+*Description: 本质上是一个串口数据帧同步有限状态机
+*Input: u8 byte 需处理的字节
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void HandleOneByte(u8 byte)
 {
 #define _MAX_BUF_LENGTH_ (20)
 	static u8 len,buf[_MAX_BUF_LENGTH_],state = NEEDAA;
@@ -140,13 +203,24 @@ void handleOneByte(u8 byte)
 		state++;
 		if(state == len)
 		{
-			frameCompleted(buf,len);
+			FrameCompleted(buf,len);
 			state = NEEDAA;
 		}
 	}
 }
 
-void frameCompleted(u8 buf[],u8 len)
+/*********************************************************************
+*Function: FrameCompleted
+*Description: 一帧数据接收完成，处理数据
+*Input: const u8 *buf 一帧数据，type+data
+*Input: u8 len 数据长度
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void FrameCompleted(const u8 *buf,u8 len)
 {
 	u8 type = buf[0];
 	buf++;
@@ -166,15 +240,25 @@ void frameCompleted(u8 buf[],u8 len)
 	}
 }
 
+/*********************************************************************
+*Function: USART1_IRQHandler
+*Description: USART1中断处理函数，处理“接收缓冲不为空”中断
+*Description: 将接收到的一字节数据存入receiveBuf
+*Input:
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
 void USART1_IRQHandler(void)
 {
 	u8 byte;
-	extern int myState;
 	if(USART_GetITStatus(USART1,USART_IT_RXNE) == SET)
 	{
 		USART_ITConfig(USART1,USART_IT_RXNE,DISABLE);
 		byte = USART_ReceiveData(USART1);
-		switch(byte)
+/*		switch(byte)
 		{
 		case 'r':
 			myState = myControl_Type_Run;
@@ -186,8 +270,9 @@ void USART1_IRQHandler(void)
 			myState = myControl_Type_Restart;
 			break;
 		}
-//		handleOneByte(byte);
+*/
 		USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
 	}
-//	myWorning();
 }
+
+

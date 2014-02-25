@@ -2,8 +2,26 @@
 #include "inv_mpu.h"
 #include "inv_mpu_dmp_motion_driver.h"
 #include "myErrorAndWorning.h"
-#include "myusart.h"
-#include "math.h"
+
+static struct
+{
+	volatile short gyro[3],accel[3];
+	volatile long quat[4];
+	volatile unsigned long timeStamp;
+	volatile short sensors;
+}MPUSensorData;
+
+/*********************************************************************
+*Function: run_self_test
+*Description: MPU6050自测
+*Description: 设定bias
+*Input:
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
 static inline void run_self_test(void)
 {
     int result;
@@ -35,44 +53,67 @@ static inline void run_self_test(void)
 */
 }
 
+/*********************************************************************
+*Function: MPU_Config
+*Description: 配置MPU6050
+*Description: 载入DMP firmware
+*Description: 进行自测
+*Input:
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
 void MPU_Config(void)
 {
-	mpu_init() == 0 ? 1 : myError(1);
-	mpu_set_sensors(INV_XYZ_ACCEL | INV_XYZ_GYRO) == 0 ? 1 : myError(2);
+	mpu_init() == 0 ? 1 : MyError(1);
+	mpu_set_sensors(INV_XYZ_ACCEL | INV_XYZ_GYRO) == 0 ? 1 : MyError(2);
 //	mpu_configure_fifo(INV_XYZ_ACCEL | INV_XYZ_GYRO) == 0 ? 1 : myError(3);
-	mpu_set_sample_rate(200) == 0 ? 1 : myError(4);
+	mpu_set_sample_rate(500) == 0 ? 1 : MyError(4);
 
-    dmp_load_motion_driver_firmware() == 0 ? 1 : myError(5);
+    dmp_load_motion_driver_firmware() == 0 ? 1 : MyError(5);
     dmp_enable_feature(  DMP_FEATURE_6X_LP_QUAT
     					|DMP_FEATURE_GYRO_CAL
-    					|DMP_FEATURE_SEND_CAL_GYRO
+    					//|DMP_FEATURE_SEND_CAL_GYRO
+    					|DMP_FEATURE_SEND_RAW_GYRO
     					|DMP_FEATURE_SEND_RAW_ACCEL
-    					) == 0 ? 1 : myError(6);
-    dmp_set_fifo_rate(50) == 0 ? 1 : myError(7);
-    mpu_set_dmp_state(ENABLE) == 0 ? 1 : myError(8);
+    					) == 0 ? 1 : MyError(6);
+    dmp_set_fifo_rate(50) == 0 ? 1 : MyError(7);
+    mpu_set_dmp_state(ENABLE) == 0 ? 1 : MyError(8);
     run_self_test();
 }
 
-void get_sensors(void)
+/*********************************************************************
+*Function: MPU_ReadDMPFifo
+*Description: 读取DMP fifo
+*Description: 将数据存入MPUSensorData结构中
+*Input:
+*Output:
+*Return:
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void MPU_ReadDMPFifo(void)
 {
-	float pitch,roll,yaw;
-    short gyro[3], accel[3], sensors;
     unsigned char more;
-    long quat[4];
-    unsigned long timestamp = 0;
-    while(dmp_read_fifo(gyro, accel, quat, &timestamp, &sensors, &more) || more);
-    {
-/*        float w,x,y,z;
-        w = quat[0] / q30;
-        x = quat[1] / q30;
-        y = quat[2] / q30;
-        z = quat[3] / q30;
+    while(dmp_read_fifo(MPUSensorData.gyro, MPUSensorData.accel,
+    		MPUSensorData.quat, &MPUSensorData.timeStamp, &MPUSensorData.sensors,
+    		&more) || more);
+}
 
-		pitch = asin(2*w*y - 2*z*x) * 57.3;
-		roll = atan2(2*w*x + 2*y*z,1 - 2*x*x - 2*y*y) * 57.3;
-		yaw = atan2(2*w*z + 2*x*y,1 - 2*y*y - 2*z*z) * 57.3;
-*/
-//TODO:        attitude_mixDMPResult(w,x,y,z);
-        send_packet(PACKET_TYPE_QUAT,quat);
-    }
+/*********************************************************************
+*Function: MPU_GetQuatData
+*Description: 获取四元数数据，返回指向四元数数组的指针
+*Input:
+*Output:
+*Return: MPUSensorData.quat
+*Others:
+*Author: Spacelan
+*Date: 2014-2-25
+*********************************************************************/
+void *MPU_GetQuatData(void)
+{
+	return MPUSensorData.quat;
 }

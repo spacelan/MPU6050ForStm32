@@ -12,67 +12,53 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="myled.h" partName="myled.h" path="D:/CooCox/CoIDE/workspace/6050msp430/led/myled.h" title="myled.h" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/led/myled.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/hardware/myled.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="147" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.c" partName="mpu6050.c" path="D:/CooCox/CoIDE/workspace/6050msp430/6050/mpu6050.c" title="mpu6050.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/6050/mpu6050.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/mpu6050/mpu6050.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="1104" selectionTopPixel="679"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.h" partName="mpu6050.h" path="D:/CooCox/CoIDE/workspace/6050msp430/6050/mpu6050.h" title="mpu6050.h" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/6050/mpu6050.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/mpu6050/mpu6050.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="166" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="inv_mpu.c" partName="inv_mpu.c" path="D:/CooCox/CoIDE/workspace/6050msp430/eMPL/inv_mpu.c" title="inv_mpu.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/eMPL/inv_mpu.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/mpu6050/inv_mpu.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="20886" selectionTopPixel="14213"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="myErrorAndWorning.c" partName="myErrorAndWorning.c" path="D:/CooCox/CoIDE/workspace/6050msp430/myErrorAndWorning.c" title="myErrorAndWorning.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/myErrorAndWorning.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/myErrorAndWorning.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="95" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="inv_mpu_dmp_motion_driver.c" partName="inv_mpu_dmp_motion_driver.c" path="D:/CooCox/CoIDE/workspace/6050msp430/eMPL/inv_mpu_dmp_motion_driver.c" title="inv_mpu_dmp_motion_driver.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/eMPL/inv_mpu_dmp_motion_driver.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/mpu6050/inv_mpu_dmp_motion_driver.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="54480" selectionTopPixel="23864"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="myusart.h" partName="myusart.h" path="D:/CooCox/CoIDE/workspace/6050msp430/myusart/myusart.h" title="myusart.h" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/myusart/myusart.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/hardware/myusart.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="235" selectionTopPixel="0"/>
-</editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/CooCox/CoIDE/workspace/6050msp430/main.c" title="main.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="577" selectionTopPixel="473"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="537" selectionTopPixel="120"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" partName="delay.c" path="D:/CooCox/CoIDE/workspace/6050msp430/delay/delay.c" title="delay.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/delay/delay.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/sys/delay.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1412" selectionTopPixel="700"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="myiic.c" partName="myiic.c" path="D:/CooCox/CoIDE/workspace/6050msp430/IIC/myiic.c" title="myiic.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/IIC/myiic.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/hardware/myiic.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3161" selectionTopPixel="2864"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="myusart.c" partName="myusart.c" path="D:/CooCox/CoIDE/workspace/6050msp430/myusart/myusart.c" title="myusart.c" tooltip="D:/CooCox/CoIDE/workspace/6050msp430/myusart/myusart.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/6050msp430/hardware/myusart.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7048" selectionTopPixel="4910"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
+<viewState>
+<ExpressionKeySet ExpKeys="w,x,y,z,pitch,roll,yaw,sensors,fifoResult,quat,"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="8">
+<expanded>
+<element path="/6050msp430"/>
+<element path="/6050msp430/hardware"/>
+<element path="/6050msp430/myErrorAndWorning"/>
+</expanded>
+<selection>
+<element path="/6050msp430/hardware/myusart.c"/>
+</selection>
+</viewState>
+</view>
+<view id="org.coocox.component.ui.ComponentView" partName="Components">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
 <viewState/>
 </view>
 <view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 <view id="org.coocox.coassistant.view.CoAssistantView_debug" partName="Peripherals">
@@ -82,40 +68,11 @@
 <registerValues baseAddress="Base Address: 0x40000800" description="Description:  TIM4 registers"/>
 </viewState>
 </view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
-<viewState>
-<ExpressionKeySet ExpKeys="w,x,y,z,pitch,roll,yaw,sensors,fifoResult,quat,"/>
-</viewState>
-</view>
-<view id="org.coocox.component.ui.ComponentView" partName="Components">
-<viewState/>
-</view>
-<view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
-<expanded>
-<element path="/6050msp430"/>
-<element path="/6050msp430/cmsis_boot"/>
-<element path="/6050msp430/hardware"/>
-</expanded>
-<selection>
-<element path="/6050msp430/hardware/myiic.c"/>
-</selection>
-</viewState>
-</view>
-<view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
-<viewState showFilesInLabels="false" variableFilter="false"/>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
 <view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view" partName="Disassembly">
 <viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
 </view>
 <view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
@@ -155,11 +112,10 @@
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.coocox.component.ui.Help"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.cdt.ui.callHierarchy"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@141a127">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@aa5805">
 <folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -167,29 +123,22 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@141a127">
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@aa5805">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@14fd2a4" ratio="0.69648564" ratioLeft="436" ratioRight="190" relationship="4" relative="org.eclipse.ui.internal.ViewStack@141a127">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@62b4d2" ratio="0.69952303" ratioLeft="440" ratioRight="189" relationship="4" relative="org.eclipse.ui.internal.ViewStack@aa5805">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.cdt.ui.callHierarchy" label="Call Hierarchy"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1c88977" ratio="0.2199262" ratioLeft="298" ratioRight="1057" relationship="2" relative="org.eclipse.ui.internal.ViewStack@141a127">
-<folder appearance="2" expanded="2">
-<page content="org.coocox.builder.ui.exampleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@87f4d0" ratio="0.7198113" ratioLeft="763" ratioRight="297" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1c88977">
+<info part="org.coocox.builder.ui.exampleView" ratio="0.21944036" ratioLeft="298" ratioRight="1060" relationship="2" relative="org.eclipse.ui.internal.ViewStack@aa5805"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@184361f" ratio="0.7198113" ratioLeft="763" ratioRight="297" relationship="2" relative="org.coocox.builder.ui.exampleView">
 <folder activePageID="org.coocox.component.ui.Help" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -201,8 +150,8 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.4499205" ratioLeft="283" ratioRight="346" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1c88977"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1bb4081" ratio="0.3688394" ratioLeft="232" ratioRight="397" relationship="4" relative="org.eclipse.ui.internal.ViewStack@141a127">
+<info part="org.eclipse.ui.editorss" ratio="0.4499205" ratioLeft="283" ratioRight="346" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@178d37b" ratio="0.3688394" ratioLeft="232" ratioRight="397" relationship="4" relative="org.eclipse.ui.internal.ViewStack@aa5805">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -318,167 +267,169 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myusart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myusart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myusart.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myiic.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/mpu6050/inv_mpu_dmp_motion_driver.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/sys/delay.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/mpu6050/mpu6050.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myusart.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/mpu6050/inv_mpu.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/mpu6050/inv_mpu_dmp_motion_driver.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myled.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myled.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/myErrorAndWorning/myErrorAndWorning.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/myErrorAndWorning/myErrorAndWorning.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/sys/delay.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myiic.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myiic.h"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/d:/gnu%20tools%20arm%20embedded/4.7%202013q2/arm-none-eabi/include/string.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/6050msp430/hardware/myusart.c"/>
 </editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="579" y="0"/>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="167" y="0"/>
+</item>
+<item historyLabel="inv_mpu.c" index="4">
+<position info="not_deleted" x="10099" y="0"/>
+</item>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="inv_mpu_dmp_motion_driver.c" index="5">
+<position/>
+</item>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="194" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="370" y="0"/>
+<position info="not_deleted" x="674" y="247"/>
+</item>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="116" y="0"/>
+</item>
+<item historyLabel="myusart.c" index="3">
+<position info="not_deleted" x="397" y="8"/>
+</item>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="298" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="370" y="0"/>
+<position info="not_deleted" x="412" y="16"/>
 </item>
-<item historyLabel="myusart.c" index="1">
-<position info="not_deleted" x="4529" y="0"/>
+<item historyLabel="myled.c" index="6">
+<position info="not_deleted" x="127" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="1">
-<position info="not_deleted" x="3448" y="0"/>
-</item>
-<item historyLabel="startup_stm32f10x_md.c" index="2">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="myled.h" index="7">
+<position info="not_deleted" x="94" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="370" y="0"/>
+<position info="not_deleted" x="445" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="1">
-<position info="not_deleted" x="3448" y="0"/>
+<item historyLabel="myErrorAndWorning.c" index="8">
+<position info="not_deleted" x="107" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="370" y="0"/>
+<item historyLabel="myErrorAndWorning.h" index="9">
+<position info="not_deleted" x="82" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="4">
-<position info="not_deleted" x="3466" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="525" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="370" y="0"/>
+<item historyLabel="delay.c" index="1">
+<position info="not_deleted" x="1802" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="370" y="0"/>
+<item historyLabel="delay.h" index="10">
+<position info="not_deleted" x="669" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="3466" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="471" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="3448" y="0"/>
+<item historyLabel="delay.h" index="10">
+<position info="not_deleted" x="530" y="0"/>
 </item>
-<item historyLabel="myiic.c" index="6">
-<position info="not_deleted" x="3579" y="0"/>
+<item historyLabel="delay.c" index="1">
+<position info="not_deleted" x="640" y="0"/>
 </item>
-<item historyLabel="inv_mpu_dmp_motion_driver.c" index="7">
-<position info="not_deleted" x="54480" y="13"/>
+<item historyLabel="myErrorAndWorning.h" index="9">
+<position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="myiic.c" index="6">
-<position info="not_deleted" x="3579" y="0"/>
+<item historyLabel="myErrorAndWorning.c" index="8">
+<position info="not_deleted" x="107" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="3597" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="546" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4596" y="13"/>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="2249" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4241" y="0"/>
+<item historyLabel="inv_mpu.c" index="4">
+<position info="not_deleted" x="3709" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="370" y="0"/>
+<item historyLabel="inv_mpu_dmp_motion_driver.c" index="5">
+<position info="not_deleted" x="2046" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4241" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="550" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4590" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="434" y="8"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4585" y="0"/>
+<item historyLabel="myiic.c" index="11">
+<position info="not_deleted" x="6937" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4688" y="0"/>
+<item historyLabel="myiic.h" index="12">
+<position info="not_deleted" x="2353" y="0"/>
 </item>
-<item historyLabel="myusart.c" index="5">
-<position info="not_deleted" x="4534" y="0"/>
+<item historyLabel="myiic.c" index="11">
+<position info="not_deleted" x="6937" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="664" y="0"/>
+<item historyLabel="myiic.h" index="12">
+<position info="not_deleted" x="2353" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="370" y="0"/>
+<item historyLabel="myiic.c" index="11">
+<position info="not_deleted" x="7238" y="0"/>
 </item>
-<item historyLabel="delay.c" index="8">
-<position info="not_deleted" x="1244" y="0"/>
+<item historyLabel="mpu6050.c" index="2">
+<position info="not_deleted" x="2249" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="675" y="0"/>
+<item historyLabel="inv_mpu.c" index="4">
+<position info="not_deleted" x="3768" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="518" y="0"/>
+<item historyLabel="inv_mpu_dmp_motion_driver.c" index="5">
+<position info="not_deleted" x="2179" y="0"/>
 </item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1998" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="546" y="0"/>
 </item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1309" y="0"/>
+<item historyLabel="string.h" index="13">
+<position info="not_deleted" x="450" y="42"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="852" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="92" y="5"/>
 </item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1226" y="0"/>
+<item historyLabel="myiic.h" index="12">
+<position info="not_deleted" x="119" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="470" y="0"/>
+<item historyLabel="myiic.c" index="11">
+<position info="not_deleted" x="383" y="0"/>
 </item>
-<item historyLabel="inv_mpu_dmp_motion_driver.c" index="7">
-<position info="not_deleted" x="54480" y="13"/>
+<item historyLabel="myiic.h" index="12">
+<position info="not_deleted" x="163" y="0"/>
 </item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1226" y="0"/>
+<item historyLabel="myiic.c" index="11">
+<position info="not_deleted" x="249" y="0"/>
 </item>
-<item historyLabel="inv_mpu_dmp_motion_driver.c" index="7">
-<position info="not_deleted" x="54480" y="13"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="92" y="5"/>
 </item>
-<item historyLabel="myiic.c" index="6">
-<position info="not_deleted" x="3579" y="0"/>
+<item historyLabel="inv_mpu_dmp_motion_driver.c" index="5">
+<position info="not_deleted" x="2179" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="470" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="92" y="5"/>
 </item>
-<item historyLabel="delay.c" index="8">
-<position info="not_deleted" x="1244" y="0"/>
+<item historyLabel="myled.c" index="6">
+<position info="not_deleted" x="127" y="0"/>
 </item>
-<item historyLabel="myiic.c" index="6">
-<position info="not_deleted" x="3579" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="537" y="0"/>
 </item>
-<item historyLabel="delay.c" index="8">
-<position info="not_deleted" x="1412" y="0"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="564" y="10"/>
-</item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1104" y="8"/>
-</item>
-<item historyLabel="inv_mpu.c" index="10">
-<position info="not_deleted" x="20886" y="0"/>
-</item>
-<item historyLabel="mpu6050.c" index="9">
-<position info="not_deleted" x="1104" y="8"/>
-</item>
-<item historyLabel="main.c" index="11">
-<position info="not_deleted" x="577" y="0"/>
-</item>
-<item active="true" historyLabel="myiic.c" index="12">
+<item active="true" historyLabel="myusart.c" index="14">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -488,50 +439,50 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myiic.c" tooltip="6050msp430/hardware/myiic.c">
-<persistable path="/6050msp430/hardware/myiic.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" tooltip="6050msp430/sys/delay.c">
-<persistable path="/6050msp430/sys/delay.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="6050msp430/main.c">
-<persistable path="/6050msp430/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_md.c" tooltip="6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c">
-<persistable path="/6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f10x_conf.h" tooltip="6050msp430/cmsis_boot/stm32f10x_conf.h">
-<persistable path="/6050msp430/cmsis_boot/stm32f10x_conf.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myusart.h" tooltip="6050msp430/hardware/myusart.h">
-<persistable path="/6050msp430/hardware/myusart.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myusart.c" tooltip="6050msp430/hardware/myusart.c">
 <persistable path="/6050msp430/hardware/myusart.c"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="string.h" tooltip="d:\gnu tools arm embedded\4.7 2013q2\arm-none-eabi\include\string.h">
+<persistable uri="file:/d:/gnu%20tools%20arm%20embedded/4.7%202013q2/arm-none-eabi/include/string.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myiic.h" tooltip="6050msp430/hardware/myiic.h">
+<persistable path="/6050msp430/hardware/myiic.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myiic.c" tooltip="6050msp430/hardware/myiic.c">
+<persistable path="/6050msp430/hardware/myiic.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="inv_mpu_dmp_motion_driver.c" tooltip="6050msp430/mpu6050/inv_mpu_dmp_motion_driver.c">
 <persistable path="/6050msp430/mpu6050/inv_mpu_dmp_motion_driver.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myErrorAndWorning.c" tooltip="6050msp430/myErrorAndWorning.c">
-<persistable path="/6050msp430/myErrorAndWorning.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" tooltip="6050msp430/sys/delay.h">
+<persistable path="/6050msp430/sys/delay.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.c" tooltip="6050msp430/sys/delay.c">
+<persistable path="/6050msp430/sys/delay.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myErrorAndWorning.h" tooltip="6050msp430/myErrorAndWorning/myErrorAndWorning.h">
+<persistable path="/6050msp430/myErrorAndWorning/myErrorAndWorning.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myErrorAndWorning.c" tooltip="6050msp430/myErrorAndWorning/myErrorAndWorning.c">
+<persistable path="/6050msp430/myErrorAndWorning/myErrorAndWorning.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myled.h" tooltip="6050msp430/hardware/myled.h">
+<persistable path="/6050msp430/hardware/myled.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myled.c" tooltip="6050msp430/hardware/myled.c">
+<persistable path="/6050msp430/hardware/myled.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="inv_mpu.c" tooltip="6050msp430/mpu6050/inv_mpu.c">
 <persistable path="/6050msp430/mpu6050/inv_mpu.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="myusart.h" tooltip="myusart/myusart.h">
-<persistable path="/myusart/myusart.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.h" tooltip="6050msp430/mpu6050/mpu6050.h">
 <persistable path="/6050msp430/mpu6050/mpu6050.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="delay.h" tooltip="6050msp430/sys/delay.h">
-<persistable path="/6050msp430/sys/delay.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mpu6050.c" tooltip="6050msp430/mpu6050/mpu6050.c">
+<persistable path="/6050msp430/mpu6050/mpu6050.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_md.c" tooltip="6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c">
-<persistable path="/6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f10x_md.c" tooltip="6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c">
-<persistable path="/6050msp430/cmsis_boot/startup/startup_stm32f10x_md.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="syscalls.c" tooltip="6050msp430/syscalls/syscalls.c">
+<persistable path="/6050msp430/syscalls/syscalls.c"/>
 </file>
 </mruList>
 </workbench>

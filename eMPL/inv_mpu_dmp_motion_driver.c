@@ -64,8 +64,8 @@
 #elif defined STM32F103C8
 //#include "stm32f10x.h"
 #include "delay.h"
-#define delay_ms    delay_ms
-#define get_ms      get_ms
+#define delay_ms    Delay_ms
+#define get_ms      Get_ms
 #define log_i(...)     do {} while (0)
 #define log_e(...)     do {} while (0)
 
