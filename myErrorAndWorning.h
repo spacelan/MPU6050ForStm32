@@ -2,7 +2,7 @@
 #define MYERRORANDWORNING_H
 
 #include "stm32f10x.h"
-void MyError(u8 n);
-void MyWorning(void);
+void myError(u8 n);
+void myWorning(void);
 
 #endif

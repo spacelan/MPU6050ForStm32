@@ -98,17 +98,6 @@ static bool I2C_WaitAck(void)
 }
 //===================================================================================
 //===================================================================================
-
-/*********************************************************************
-*Function: I2C_SendByte
-*Description: 发送一字节数据
-*Input: uint8_t byte 需发送的字节
-*Output:
-*Return:
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
 static void I2C_SendByte(uint8_t byte)
 {
     uint8_t i = 8;
@@ -127,16 +116,6 @@ static void I2C_SendByte(uint8_t byte)
     SCL_L;
 }
 
-/*********************************************************************
-*Function: I2C_ReceiveByte
-*Description: 接收一字节数据
-*Input:
-*Output:
-*Return: 接收到的字节
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
 static uint8_t I2C_ReceiveByte(void)
 {
     uint8_t i = 8;
@@ -157,17 +136,7 @@ static uint8_t I2C_ReceiveByte(void)
     return byte;
 }
 
-/*********************************************************************
-*Function: I2c_Init
-*Description: i2c总线初始化
-*Input:
-*Output:
-*Return:
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-void I2c_Init(void)
+void i2cInit(void)
 {
     GPIO_InitTypeDef gpio;
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB,ENABLE);
@@ -178,21 +147,7 @@ void I2c_Init(void)
     GPIO_Init(GPIOB, &gpio);
 }
 
-/*********************************************************************
-*Function: I2c_WriteBuffer
-*Description: 向从机写入数据
-*Input: uint8_t addr 从机地址
-*Input: uint8_t reg 从机寄存器起始地址
-*Input: uint8_t len 数据长度，字节单位
-*Input: uint8_t const *buf 数据指针
-*Output:
-*Return: 1 成功
-*Return: 0 失败
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-bool I2c_WriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
+bool i2cWriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
 {
     int i;
     if (!I2C_Start())
@@ -215,52 +170,19 @@ bool I2c_WriteBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
     return true;
 }
 
-/*********************************************************************
-*Function:
-*Description:
-*Input:
-*Output:
-*Return:
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-bool I2c_Write(uint8_t addr, uint8_t reg, uint8_t const *data)
+bool i2cWrite(uint8_t addr, uint8_t reg, uint8_t const *data)
 {
-	return I2c_WriteBuffer(addr,reg,1,data);
+	return i2cWriteBuffer(addr,reg,1,data);
 }
 
-/*********************************************************************
-*Function: I2c_write
-*Description: 用于MPU6050的i2c函数
-*Description: 成功 0 失败 -1
-*Input:
-*Output:
-*Return: 成功 0 失败 -1
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-bool I2c_write(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
+bool i2cwrite(uint8_t addr, uint8_t reg, uint8_t len, uint8_t const *buf)
 {
-	if(I2c_WriteBuffer(addr,reg,len,buf))
+	if(i2cWriteBuffer(addr,reg,len,buf))
 		return 0;
 	else return -1;
 }
 
-/*********************************************************************
-*Function: I2c_ReadBuffer
-*Description: 从从机读取数据
-*Input: uint8_t addr 从机地址
-*Input: uint8_t reg 从机寄存器起始地址
-*Input: uint8_t len 需读取的数据长度
-*Output: uint8_t *buf 指向读取的数据
-*Return:
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-bool I2c_ReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
+bool i2cReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
 {
     if (!I2C_Start())
         return false;
@@ -287,25 +209,14 @@ bool I2c_ReadBuffer(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
     return true;
 }
 
-bool I2c_Read(uint8_t addr, uint8_t reg, uint8_t *data)
+bool i2cRead(uint8_t addr, uint8_t reg, uint8_t *data)
 {
-	return I2c_ReadBuffer(addr,reg,1,data);
+	return i2cReadBuffer(addr,reg,1,data);
 }
 
-/*********************************************************************
-*Function: I2c_read
-*Description: 用于MPU6050的i2c函数
-*Description: 成功 0 失败 -1
-*Input:
-*Output:
-*Return: 成功 0 失败 -1
-*Others:
-*Author: Spacelan
-*Date: 2014-2-25
-*********************************************************************/
-bool I2c_read(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
+bool i2cread(uint8_t addr, uint8_t reg, uint8_t len, uint8_t *buf)
 {
-	if(I2c_ReadBuffer(addr,reg,len,buf))
+	if(i2cReadBuffer(addr,reg,len,buf))
 		return 0;
 	else return -1;
 }

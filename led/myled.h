@@ -10,11 +10,11 @@
 #define ON  0
 #define OFF 1
 
-#define MyLED(a)	if (a)	\
+#define myLED(a)	if (a)	\
 					GPIO_SetBits(GPIOA,GPIO_Pin_15);\
 					else		\
 					GPIO_ResetBits(GPIOA,GPIO_Pin_15)
 
-void MyLED_GPIO_Config(void);
+void myLED_GPIO_Config(void);
 
 #endif /* __MYLED_H */
